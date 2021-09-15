@@ -14,24 +14,29 @@
 </head>
 
 <body>
-    <header class="py-5 text-center">
-        <h1>Nobel winners:</h1>
+    <header class="py-5 mb-5 text-center">
+        <h1>Nobel prize winners:</h1>
     </header>
     <main>
         <div id="app" class="container my_container">
-            <div class="row d-flex">
+            <div class="row d-flex justify-content-around">
 
                 <div class="my_arrow left-arrow col-1">
-                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-chevron-left" @click="previousImage()"></i>
                 </div>
 
-                <div class="my_img-container col-10">
-    
+                <div class="my_img-container col-8">
+                    <img :src="images[imageIndex].source" :alt="images[imageIndex].alt">
                 </div>
-                
+
                 <div class="my_arrow right-arrow col-1">
-                    <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-right" @click="nextImage()"></i>
                 </div>
+
+                <div class="col-12 my_name-container" v-for="element in images">
+                    <h3>{{ element.name }}</h3>
+                </div>
+
             </div>
         </div>
     </main>
