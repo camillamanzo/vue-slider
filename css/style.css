@@ -9,6 +9,12 @@ body{
     color: white;
 }
 
+div > h3,
+div > p:hover,
+.my_arrow i:hover{
+    color: rgb(252, 245, 146);
+}
+
 .my_container .row{
     height: 400px;
 }
@@ -31,7 +37,8 @@ body{
     width: 100%;
 }
 
-.my_arrow i:hover{
+.my_arrow i:active{
     font-size: 3.2em;
 }
+
 
